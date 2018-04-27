@@ -1,0 +1,179 @@
+/* ========================================
+ * CSS written here will override Tachyons
+ * ======================================== */
+
+/* basic wrapper */
+
+#sans-serif {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1fr;
+}
+
+/* banner on  top */
+
+#logobar {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: black;
+  color: white;
+  width: 100%;
+  max-height: 10%;
+  text-align: center;
+  position: relative;
+}
+
+#location-search {
+  margin-top: 0;
+  margin-bottom: 4em;
+  font-size: 0.75em;
+}
+
+/* country displayed under banner  */
+
+#countrydisplay {
+  font-size: 1.5em;
+  margin-left: 15%;
+  font-weight: bold;
+}
+
+/* main content  */
+
+#contentgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3em;
+  grid-row-gap: 3em;
+  margin: 0 0 0 15vh;
+}
+
+#contentgrid p {
+  padding: 0 0 0 1em;
+}
+
+#contentgrid h2 {
+  padding: 0 0 0 0.625em;
+}
+
+#contentsubgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* temperature   */
+
+#rectangle {
+  border: solid 1px;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1.75em;
+}
+
+#top_subgrid h2 {
+  font-size: 2em;
+}
+
+#top_subgrid {
+  width: 100%;
+  text-align: center;
+  grid-template-columns: 1fr;
+}
+
+#bottom_subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#temp {
+  font-weight: bold;
+  font-size: 2em;
+  display: inline-block;
+  border: solid 2px black;
+  border-radius: 75px;
+  padding: 0.75em;
+}
+
+#currenttemp {
+  text-align: center;
+}
+
+/* weather   */
+
+#weatherlocation {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: solid 1px;
+  margin-right: 5vh;
+}
+
+/* WEATHER CLASSES */
+/* temperature */
+
+.cold {
+  background-color: #6490f3;
+}
+
+.cold h4 {
+  color: #6490f3;
+}
+
+.warm {
+  background-color: #ffe258;
+}
+
+.warm h4 {
+  color: #ffe258;
+}
+
+.hot {
+  background-color: #ffa358;
+}
+
+.hot h4 {
+  color: #ffa358;
+}
+
+/* weather */
+
+.thunderstorm #weatherlocation {
+  background-image: url("leaf4.jpg");
+}
+
+.haze #weatherlocation {
+}
+
+.mist #weatherlocation {
+}
+
+.drizzle #weatherlocation {
+}
+
+.rain #weatherlocation {
+}
+
+.snow #weatherlocation {
+}
+
+.atmosphere #weatherlocation {
+}
+
+.clear #weatherlocation {
+}
+
+.clouds #weatherlocation {
+}
+
+/*media queries*/
+
+@media screen and (max-width: 600px) {
+  #contentgrid {
+    grid-template-columns: 1fr;
+    margin: 0.5em;
+  }
+  #bottom_subgrid {
+    grid-template-columns: 1fr;
+  }
+  #weatherlocation {
+    grid-template-columns: 1fr;
+  }
+}

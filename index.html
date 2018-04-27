@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Set a page title -->
+  <title>Weather</title>
+
+  <!-- Site Styles -->
+  <link rel="stylesheet" href="css/tachyons.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/leaves2.css" />
+
+</head>
+
+<body>
+  <section>
+    <div class="leaves">
+      <div><img src="leaf1.png"></div>
+      <div><img src="leaf2.png"></div>
+      <div><img src="leaf3.png"></div>
+      <div><img src="leaf4.png"></div>
+    </div>
+    <div class="leaves2">
+      <div><img src="leaf1.png"></div>
+      <div><img src="leaf2.png"></div>
+    </div>
+  </section>
+
+  <div class="sans-serif">
+
+    <div id="logobar">
+      <h4>super chill weather report</h4>
+    </div>
+
+
+    <!-- If there is an error, this box is shown. 'dn' is the only required class -->
+    <div id="error" class="dn bg-red white pa4 fixed bottom-0 w-100">
+      Sorry, we couldn't find that city.
+    </div>
+
+    <!-- Search Box -->
+
+    <form id="location-search" class="pa4">
+      <h1 class="flex flex-wrap items-baseline">
+              <span class="mr3 mb2">
+                Weather for:
+              </span>
+              <input type="text" id="area" value="Boston" class="flex-auto">
+            </h1>
+      <p span id="countrydisplay">Country: <span id="country"></span></p>
+    </form>
+
+    <!-- Content -->
+    <div id="contentgrid">
+
+      <!-- temperature -->
+
+      <div id="rectangle">
+        <div id="top_subgrid">
+          <h2>Temperature</h2>
+        </div>
+        <div id="bottom_subgrid">
+          <div id="currenttemp">
+            <h2><span id="temp"></span></h2>
+          </div>
+          <div>
+            <p>Max Temp: <span id="temp-max"></span></p>
+            <p>Min Temp: <span id="temp-min"></span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- weather condition -->
+
+
+      <div id="weatherlocation">
+        <div>
+          <h2>Weather</h2>
+          <p>Condition: <span id="condition"></span></p>
+          <p>Desription: <span id="condition-description"></span></p>
+          <p>Wind Speed: <span id="wind-speed"></span>mph</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Site JavaScript -->
+  <script src="javascript/toggleClass.js" charset="utf-8"></script>
+  <script src="javascript/main.js" charset="utf-8"></script>
+  <script src="javascript/weather.js" charset="utf-8"></script>
+</body>
+
+</html>

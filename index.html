@@ -48,9 +48,11 @@
               <span class="mr3 mb2">
                 Weather for:
               </span>
-              <input type="text" id="area" value="Boston" class="flex-auto">
+              <input type="text" id="area" value="Boston" class="flex-auto" >
             </h1>
-      <p span id="countrydisplay">Country: <span id="country"></span></p>
+      <div id="locationdisplay">
+        <h3 class="flex flex-wrap items-baseline">  <span class="mr3 mb2" id="countrydisplay">Country: <span id="country"> </h3>
+      </div>
     </form>
 
     <!-- Content -->
@@ -59,16 +61,12 @@
       <!-- temperature -->
 
       <div id="rectangle">
-        <div id="top_subgrid">
-          <h2>Temperature</h2>
-        </div>
         <div id="bottom_subgrid">
-          <div id="currenttemp">
-            <h2><span id="temp"></span></h2>
-          </div>
-          <div>
-            <p>Max Temp: <span id="temp-max"></span></p>
-            <p>Min Temp: <span id="temp-min"></span></p>
+          <span id="currenttemp">
+            <h2><span id="temp"></span>&#176;</h2>
+          </span>
+          <div id="secondweather">
+            <p>Max Temp: <span id="temp-max"></span>&#176;<br> Min Temp: <span id="temp-min"></span>&#176;</p>
           </div>
         </div>
       </div>
@@ -77,12 +75,18 @@
 
 
       <div id="weatherlocation">
-        <div>
-          <h2>Weather</h2>
-          <p>Condition: <span id="condition"></span></p>
-          <p>Desription: <span id="condition-description"></span></p>
-          <p>Wind Speed: <span id="wind-speed"></span>mph</p>
-        </div>
+        <div></div>
+        <h2>Weather</h2>
+        <div></div>
+        <div></div>
+        <p><span class="bold">Condition:</span> <span id="condition"></span></p>
+        <div></div>
+        <div></div>
+        <p><span class="bold">Desription:</span> <span id="condition-description"></span></p>
+        <div></div>
+        <div></div>
+        <p><span class="bold">Wind Speed:</span> <span id="wind-speed"></span>mph</p>
+        <div></div>
       </div>
 
     </div>

@@ -31,10 +31,15 @@
 
 /* country displayed under banner  */
 
-#countrydisplay {
-  font-size: 1.5em;
-  margin-left: 15%;
+#locationdisplay {
+  font-size: 1.25em;
   font-weight: bold;
+  padding: 1em;
+  display: flex;
+  text-align: center;
+  max-width: 100%;
+  justify-content: center;
+  margin-top: -2.5em;
 }
 
 /* main content  */
@@ -44,7 +49,7 @@
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 3em;
   grid-row-gap: 3em;
-  margin: 0 0 0 15vh;
+  margin: 1em;
 }
 
 #contentgrid p {
@@ -66,17 +71,8 @@
   border: solid 1px;
   display: grid;
   grid-template-columns: 1fr;
-  padding: 1.75em;
-}
-
-#top_subgrid h2 {
-  font-size: 2em;
-}
-
-#top_subgrid {
-  width: 100%;
-  text-align: center;
-  grid-template-columns: 1fr;
+  padding: 0;
+  grid-column-gap: 1em;
 }
 
 #bottom_subgrid {
@@ -84,26 +80,39 @@
   grid-template-columns: 1fr 1fr;
 }
 
-#temp {
+#currenttemp {
+  display: block;
+  text-align: center;
+  font-size: 4em;
   font-weight: bold;
-  font-size: 2em;
-  display: inline-block;
-  border: solid 2px black;
-  border-radius: 75px;
-  padding: 0.75em;
 }
 
-#currenttemp {
-  text-align: center;
+#secondweather {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  text-align: left;
+  line-height: 3em;
+  font-size: 1em;
+  font-weight: 500;
 }
 
 /* weather   */
 
 #weatherlocation {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   border: solid 1px;
-  margin-right: 5vh;
+  align-items: center;
+  text-align: left;
+  justify-content: center;
+  width: 100%;
+  margin-right: 5%;
+  font-size: 1em;
+}
+
+#weatherlocation .bold {
+  font-weight: 700;
 }
 
 /* WEATHER CLASSES */
@@ -173,7 +182,11 @@
   #bottom_subgrid {
     grid-template-columns: 1fr;
   }
+  #secondweather {
+    text-align: center;
+  }
   #weatherlocation {
     grid-template-columns: 1fr;
+    text-align: center;
   }
 }
